@@ -12,11 +12,15 @@ export default function JTexarea(props) {
     //validating the texarea's value
     try {
       const v = e.target.value;
-      const obj = JSON.parse(v);
-      setValue(obj);
-      props.onPass(obj);
-      e.target.value = JSON.stringify(obj, undefined, 4);
-      setJsonParseError(false);
+      if (v === "") {
+        setJsonParseError(false);
+      } else {
+        const obj = JSON.parse(v);
+        setValue(obj);
+        props.onPass(obj);
+        e.target.value = JSON.stringify(obj, undefined, 4);
+        setJsonParseError(false);
+      }
     } catch (err) {
       props.onError(e.target.value, err);
       setJsonParseError(true);
@@ -31,8 +35,8 @@ export default function JTexarea(props) {
             " " +
             (jsonParseError ? styles.error : styles.success)
           : jsonParseError
-          ? styles.error + "|4"
-          : styles.success + "|5"
+          ? styles.error
+          : styles.success
       }
       rows={props.Rows || ""}
       id={props.Id || ""}
