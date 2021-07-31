@@ -2,6 +2,9 @@
 
 Simple react textarea component which will parse and prettifies the input.
 
+![JTexarea](https://user-images.githubusercontent.com/19800339/127748115-48098649-2dea-4fc7-8da4-786c41aa5f58.gif)
+
+
 ## How to use
 
 1. copy `JTexarea.js` and `JTexarea.module.css` to your project directory (or where ever you desire)
