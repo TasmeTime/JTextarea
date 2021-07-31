@@ -22,7 +22,7 @@ export default function JTexarea(props) {
         setJsonParseError(false);
       }
     } catch (err) {
-      props.onError(e.target.value, err);
+      if (props.onError) props.onError(e.target.value, err);
       setJsonParseError(true);
     }
   }
@@ -30,13 +30,15 @@ export default function JTexarea(props) {
   return (
     <textarea
       className={
-        props.className
+        styles.JTextarea +
+        " " +
+        (props.className
           ? props.className +
             " " +
             (jsonParseError ? styles.error : styles.success)
           : jsonParseError
           ? styles.error
-          : styles.success
+          : styles.success)
       }
       rows={props.Rows || ""}
       id={props.Id || ""}
