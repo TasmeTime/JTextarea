@@ -2,7 +2,8 @@
 
 Simple react textarea component which will parse and prettifies the input.
 
-![jtextarea_success](https://user-images.githubusercontent.com/19800339/127746270-4f66d229-7de5-4628-bc55-bc0f560e5515.PNG)
+![JTexarea](https://user-images.githubusercontent.com/19800339/127748115-48098649-2dea-4fc7-8da4-786c41aa5f58.gif)
+
 
 ## How to use
 
