@@ -2,7 +2,7 @@ import JTexarea from "./json-textarea/JTexarea";
 import "./App.css";
 
 function App() {
-  //called when the input successfully parsed to js object
+  //called when the input is successfully parsed to js object
   function onPass(object) {
     console.log("PASSED: ", object);
   }
